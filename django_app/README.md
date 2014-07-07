@@ -4,16 +4,16 @@
 
 ## 第一個 Django APP
 
-還記得剛剛的 manage.py 嗎？在這邊我們也會用 manage.py 來創建我們的第一個 Django APP。要創建 Django APP，首先，我們先來創建一個管理文章的 Django APP，我們叫做 article 好了。在 shell 底下輸入：
+還記得剛剛的 manage.py 嗎？在這邊我們也會用 manage.py 來創建我們的第一個 Django APP。首先，我們先來創建一個會顯示 Programmer's Excuse 的的 Django APP，我們叫做 excuse 好了。在 shell 底下輸入：
 
 ```
-python manage.py startapp quote
+python manage.py startapp excuse
 ```
 
-我們可以看到建立起了一個叫做 quote 的目錄，在 quote 這個目錄底下我們會看到以下的檔案：
+我們可以看到建立起了一個叫做 excuse 的目錄，在 excuse 這個目錄底下我們會看到以下的檔案：
 
 ```
-- quote
+- excuse
   - __init__.py
   - models.py
   - tests.py
@@ -22,7 +22,7 @@ python manage.py startapp quote
 
 這樣就順利的建起我們第一個 app 的目錄。在接下來的章節我們會來看看其中的檔案，不過現在我們暫時不管他。
 
-接著我們要讓 Django 知道我們有了 quote 這個 APP，讓我們打開 mysite 資料夾中 settings.py 這個檔案。這個檔案顧名思義就是管理所有跟 Django 相關的設定。找到 settings.py 當中的 INSTALLED_APPS 這個變數，在最下面加上 'quote' 就成功的讓 Django 知道會有一個叫做 quote 的 APP。
+接著我們要讓 Django 知道我們有了 excuse 這個 APP，讓我們打開 mysite 資料夾中 settings.py 這個檔案。這個檔案顧名思義就是管理所有跟 Django 相關的設定。找到 settings.py 當中的 INSTALLED_APPS 這個變數，在最下面加上 'excuse' 就成功的讓 Django 知道會有一個叫做 excuse 的 APP。
 
 ```python
 INSTALLED_APPS = (
@@ -36,6 +36,6 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'quote',
+    'excuse',
 )
 ```
