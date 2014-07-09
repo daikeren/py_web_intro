@@ -45,7 +45,4 @@ urlpatterns = patterns('',
 python manage.py runserver
 ```
 
-打開你的瀏覽器，開啓 http://localhost:8000，應該就會看到 "It was working in my head" 出現！
-
-## 練習
-
+打開你的瀏覽器，開啓 http://localhost:8000 ，應該就會看到 "It was working in my head" 出現！
