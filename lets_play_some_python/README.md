@@ -9,10 +9,10 @@
 ```python
 def home(request):
     excuses = [
-        'It was working in my head',
-        'I thought I fixed that',
-        'Actually, that is a feature',
-        'It works on my machine',
+        "It was working in my head",
+        "I thought I fixed that",
+        "Actually, that is a feature",
+        "It works on my machine",
     ]
 
     return HttpResponse(excuses[0].upper())
@@ -29,10 +29,10 @@ def home(request):
 ```python
 def home(request):
     excuses = [
-        'It was working in my head',
-        'I thought I fixed that',
-        'Actually, that is a feature',
-        'It works on my machine',
+        "It was working in my head",
+        "I thought I fixed that",
+        "Actually, that is a feature",
+        "It works on my machine",
     ]
 
     output = ''
@@ -55,10 +55,10 @@ import random
 
 def home(request):
     excuses = [
-        'It was working in my head',
-        'I thought I fixed that',
-        'Actually, that is a feature',
-        'It works on my machine',
+        "It was working in my head",
+        "I thought I fixed that",
+        "Actually, that is a feature",
+        "It works on my machine",
     ]
 
     return HttpResponse(random.choice(excuses))
