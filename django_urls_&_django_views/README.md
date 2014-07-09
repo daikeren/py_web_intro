@@ -13,7 +13,7 @@ def home(request):
     excuses = [
         'It was working in my head',
         'I thought I fixed that',
-        'Actually, that's a feature',
+        'Actually, that is a feature',
         'It works on my machine',
     ]
 
