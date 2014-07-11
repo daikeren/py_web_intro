@@ -20,7 +20,7 @@ def home(request):
 
 ### 小練習
 
-看一下關於字串的說明文件，除了 str.upper() 之外還有哪些可以用呢？試試看吧！
+看一下關於[字串的說明文件](https://docs.python.org/3/library/string.html)，除了 str.upper() 之外還有哪些可以用呢？試試看吧！
 
 ## for loop
 

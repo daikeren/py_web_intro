@@ -9,6 +9,8 @@
 讓我們打開 excuse/views.py 這個檔案，輸入以下的程式碼：
 
 ```python
+from django.http import HttpResponse
+
 def home(request):
     excuses = [
         "It was working in my head",
@@ -28,7 +30,7 @@ def home(request):
 
 ## Django URLs
 
-我們寫好第一個 view 之後，那麼我們該怎麼讓 Django 知道連到哪個 URL 會呼叫這個 view 呢？這就是 Django URLs 會處理的事情。讓我們打開 quote/urls.py 這個檔案，在 urlpatterns 當中加入以下的 code
+我們寫好第一個 view 之後，那麼我們該怎麼讓 Django 知道連到哪個 URL 會呼叫這個 view 呢？這就是 Django URLs 會處理的事情。讓我們打開 mysite/urls.py 這個檔案，在 urlpatterns 當中加入以下的 code
 
 ```python
 urlpatterns = patterns('',

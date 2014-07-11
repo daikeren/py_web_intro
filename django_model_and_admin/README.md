@@ -1,6 +1,6 @@
 # Django Model & Django Admin
 
-其實到這邊為止我們已經差不多 clone 完 Programmer's Excuses 網站的功能了，只要在 views 裡面多加幾個 excuses 就好！但是我想可能會有疑問：這樣每次都要改程式碼感覺好像有點蠢，不是聽說 Django 是什麼 MVC Framework？又聽說 Django 可以跟資料庫連接，為什麼到現在都還沒提到呢？
+其實到這邊為止我們已經差不多 clone 完 Programmer's Excuses 網站的功能了，只要在 views 裡面多加幾個 excuses 就能夠一直新增更多的藉口！但是我想可能會有疑問：這樣每次都要改程式碼感覺好像有點蠢，不是聽說 Django 是什麼 MVC Framework？又聽說 Django 可以跟資料庫連接，為什麼到現在都還沒提到呢？
 
 別急！這章會教大家怎麼讓 Django 跟資料庫做連接，還有 Django 如何很快地生出一個管理後台來！
 
@@ -8,7 +8,7 @@
 
 使用 Django 的最大好處之一就是 Django 原生支援許多的資料庫，只要經過簡單的設定，你可以輕鬆從 sqlite 轉換到 MySQL 甚至是 Oracle。為了我們現在開發方便，我們就先用最簡單的 sqlite 吧！
 
-Django 當中跟資料庫相關的設定，都在 settings.py 當中。打開 blog/settings.py 這個檔案，會看到如下的程式碼：
+Django 當中跟資料庫相關的設定，都在 settings.py 當中。打開 mysite/settings.py 這個檔案，會看到如下的程式碼：
 
 ```python
 DATABASES = {
@@ -54,7 +54,7 @@ class Excuse(models.Model):
 python manage.py syncdb
 ```
 
-就會完成生成 table 的生成。在這邊，你會看到因為我們在 INSTALLED_APPS 當中有使用 Django 的 auth 系統，因此 Django 會問你是否需要創建 superuser，在這邊你可以輸入一個你喜歡的 username 還有密碼，在下一章節會使用到。
+就會完成生成 table 的生成。在這邊，你會看到因為我們在 INSTALLED_APPS 當中有使用 Django 的 auth 系統，因此 Django 會問你是否需要創建 superuser，在這邊你可以輸入一個你喜歡的 username 還有密碼，在等一下會使用到。
 
 ## 讓我們來玩玩 Model 吧
 
@@ -72,6 +72,7 @@ python manage.py shell
 >>> from excuse.models import Excuse
 >>> Excuse.objects.create(content="It was working in my head")
 >>> Excuse.objects.create(content="I thought I fixed that")
+>>> Excuse.objects.create(content="Actually, that is a feature")
 ```
 
 在這邊，我們創建了 3 個 Excuse 物件，把它們塞到了 database 當中。可以看到我們在這邊沒有寫任何的 SQL 就完成了 insert 資料到 database 的動作。
@@ -84,7 +85,23 @@ python manage.py shell
 >>>     print article.title
 ```
 
-其他更多的 query API 可以參考 [Django 的官方文件](https://docs.djangoproject.com/en/1.6/ref/models/querysets/)，透過 Django Model 提供的 API，讓你幾乎可以不用寫 SQL 就可以完成許多跟 Database 的操作。
+其他更多的查詢 Django Model 方法可以參考 [Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.6/ref/models/querysets/)，透過 Django Model 提供的 API，讓你幾乎可以不用寫 SQL 就可以完成許多跟 Database 的操作。
+
+## 修改 Django View
+
+接著我們的 excuse/views.py 要來跟著相對應的修改，改成從 Database 當中拿出來資料。
+
+```python
+def home(request):
+    excuse = Excuse.objects.all().order_by('?')[0]
+    return render(request, "index.html", {'excuse': excuse})
+```
+
+在這邊，我們用了 [order_by()](https://docs.djangoproject.com/en/dev/ref/models/querysets/#django.db.models.query.QuerySet.order_by) 這個 function，其中傳入 '?' 代表我們以隨機的方式對取出的資料做排序，接著再拿出第一筆。就可以達到我們想要的效果！
+
+### 小練習
+
+看看[Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.6/ref/models/querysets/)，還有哪些方法可以用呢？玩玩看吧！
 
 ## Django Admin
 
@@ -94,8 +111,6 @@ python manage.py shell
 
 ```python
 INSTALLED_APPS = (
-...
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
 ...
 )
@@ -129,3 +144,6 @@ admin.site.register(Excuse)
 
 這時候重新 reload http://localhost:8000/admin ，應該就會看到上面出現能夠修改 Excuse 的 admin 界面，我們就可以在這邊做創造、讀取、更新、刪除的動作了。
 
+### 小練習
+
+打開 Django Admin，隨便新增修改 Excuse 幾個試試看吧！

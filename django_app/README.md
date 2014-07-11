@@ -18,6 +18,7 @@ python manage.py startapp excuse
   - models.py
   - tests.py
   - views.py
+  - admin.py
 ```
 
 這樣就順利的建起我們第一個 app 的目錄。在接下來的章節我們會來看看其中的檔案，不過現在我們暫時不管他。
@@ -26,16 +27,12 @@ python manage.py startapp excuse
 
 ```python
 INSTALLED_APPS = (
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
     'excuse',
 )
 ```
