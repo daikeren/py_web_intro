@@ -3,5 +3,6 @@
 如果有任何意見，歡迎送 Pull Request，或是直接聯絡我。 [andy@dorm7.com](mailto:andy@dorm7.com)
 
 * 這份講義是用 gitbook 寫成，檔案在 https://github.com/daikeren/py_web_intro
-* Build 好完成的版本放在 http://daikeren.gitbooks.io/python-web-workshop/
-* 最後完成的程式碼在：https://github.com/daikeren/pyweb_code
+* 線上閱讀 http://daikeren.gitbooks.io/python-web-workshop/
+* PDF、EPUB、Mobi 版本 https://www.gitbook.io/book/daikeren/python-web-workshop
+* 最後完成的程式碼在 https://github.com/daikeren/pyweb_code
