@@ -46,7 +46,9 @@ dj_database_url 是在安裝前面所說的 django-toolbelt 會一併安裝的�
 
 接著我們把目前安裝的套件資訊都放到 requirements.txt 當中，如此 Heroku 才會知道要幫我們安裝哪些套件
 
-```pip freeze > requirements.txt```
+```
+pip freeze > requirements.txt
+```
 
 Heroku 是透過 git 來做 deployment 的。所以接下來，我們來初始化我們的 git repository.
 
