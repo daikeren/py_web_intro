@@ -21,7 +21,9 @@ ngrok 就會給你一個網址，其他人就可以透過這個網址連到你�
 
 首先，在我們剛剛建好的 virtualenv 下面先安裝 django-toolbelt 這個套件。
 
-```pip install django-toolbelt```
+```
+pip install django-toolbelt
+```
 
 django-toolbelt 是個讓我們的 Django Project 可以更容易地在 heroku 上面運行的套件。
 
@@ -33,7 +35,7 @@ web: python manage.py runserver 0.0.0.0:$PORT
 
 Procfile 的目的是告訴 heroku 啟動這個 web project 的時候要跑怎麼樣的指令，這邊我們暫時直接用原本的 runserver 來啟動。
 
-接下來，在 blog/settings.py 最底下加上以下幾行
+接下來，在 excuse/settings.py 最底下加上以下幾行
 
 ```python
 import os
@@ -86,5 +88,7 @@ heroku open
 
 沒有意外的話應該可以看到瀏覽器開啟，你的 Django Project 就丟上去雲端了！
 
-**附註：上面敘述的方法其實並不完整，使用 runserver 實際上是會爆炸的，但是這邊是 tutorial，就以簡單為主。完整的流程請參考 [Heroku 官方文件](https://devcenter.heroku.com/articles/getting-started-with-django)
+**PS1. 別忘記還是要連去 admin 界面新增幾筆資料喔！**
+
+**PS2. 上面敘述的方法其實並不完整，使用 runserver 實際上是會爆炸的，但是這邊是 tutorial，就以簡單為主。完整的流程請參考 [Heroku 官方文件](https://devcenter.heroku.com/articles/getting-started-with-django)
 **
