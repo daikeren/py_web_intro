@@ -88,7 +88,7 @@ def home(request):
     ]
 
     excuse = random.choice(excuses)
-    return render(request, "home.html", {'excuse': excuse})
+    return render(request, "index.html", {'excuse': excuse})
 ```
 
 我們 import 了 django.shortcuts.render，這個 function 可以幫助我們讀取 template 之後，把變數以 python dictionary 的方式傳入 template 當中，最後再 render 出來並且回傳到瀏覽器中。接著 reload 瀏覽器，如果沒做錯的話應該可以看到跟剛剛一樣的結果！

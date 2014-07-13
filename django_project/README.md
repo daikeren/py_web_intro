@@ -8,7 +8,7 @@
 django-admin.py startproject mysite
 ```
 
-就可以看到我們的資料夾多了一個叫做 blog 的目錄，這個目錄當中的檔案如下：
+就可以看到我們的資料夾多了一個叫做 mysite 的目錄，這個目錄當中的檔案如下：
 
 ```
 - mysite

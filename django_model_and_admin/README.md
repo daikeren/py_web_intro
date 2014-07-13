@@ -81,8 +81,8 @@ python manage.py shell
 
 ```python
 >>> Excuse.objects.all()
->>> for article in Excuse.objects.all():
->>>     print article.title
+>>> for excuse in Excuse.objects.all():
+>>>     print excuse.content
 ```
 
 其他更多的查詢 Django Model 方法可以參考 [Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.6/ref/models/querysets/)，透過 Django Model 提供的 API，讓你幾乎可以不用寫 SQL 就可以完成許多跟 Database 的操作。
@@ -92,6 +92,8 @@ python manage.py shell
 接著我們的 excuse/views.py 要來跟著相對應的修改，改成從 Database 當中拿出來資料。
 
 ```python
+from excuse.models import Excuse
+
 def home(request):
     excuse = Excuse.objects.all().order_by('?')[0]
     return render(request, "index.html", {'excuse': excuse})
