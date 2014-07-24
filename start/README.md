@@ -4,7 +4,8 @@
 
 建議也可以看看以下的參考資料：
 
-* [Django Tutorial for PyCon APAC 2014](http://daikeren.github.io/django_tutorial/) - 這是我在今年 PyCon 開的 Django Tutorial 課程
+* [Django Tutorial for PyCon APAC 2014](http://daikeren.github.io/django_tutorial/) - 這是我在今年 PyCon 開的 Django Tutorial 講義
+* [Writing your first Django app](https://docs.djangoproject.com/en/1.6/intro/tutorial01/) - Django 官方的 Tutorial
 * [Django 官方文件](https://www.djangoproject.com/) - 必看！文件相當詳細，不過建議有問題再來找。
 * [Django Book](http://www.djangobook.com/en/2.0/index.html) - 雖然書的內容有點舊，不過還是有些東西值得參考
 * [Getting Started with Django](http://gettingstartedwithdjango.com/) - 如果你比較喜歡看 video，或許可以參考這個網站
