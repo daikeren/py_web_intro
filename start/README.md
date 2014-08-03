@@ -2,6 +2,10 @@
 
 恭喜你看到了這邊，你已經對 Django 有了最基本的認知。那麼接下來我們該怎麼繼續下去呢？
 
+首先可以想看看是不是可以加些什麼功能呢？
+
+*
+
 建議也可以看看以下的參考資料：
 
 * [Django Tutorial for PyCon APAC 2014](http://daikeren.github.io/django_tutorial/) - 這是我在今年 PyCon 開的 Django Tutorial 講義

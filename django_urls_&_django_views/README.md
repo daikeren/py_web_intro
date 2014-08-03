@@ -39,7 +39,7 @@ urlpatterns = patterns('',
 )
 ```
 
-在這邊，我們可以看到我們使用了一個 url function ，有三個傳入值，第一個傳入值是個 regular expression，在此我們傳入一個空字串，也就是會對應道 url 當中沒有任何東西的時候。兒第二個傳入值是個 view function 的位置，這邊我們是傳入剛剛寫的 excuse.views.home
+在這邊，我們可以看到我們使用了一個 url function ，有三個傳入值，第一個傳入值是個 regular expression，在此我們傳入一個空字串，也就是會對應到 url 當中沒有任何東西的時候。而第二個傳入值是個 view function 的位置，這邊我們是傳入剛剛寫的 excuse.views.home
 
 接著切換到你的 terminal，重新輸入
 

@@ -92,14 +92,14 @@ python manage.py shell
 接著我們的 excuse/views.py 要來跟著相對應的修改，改成從 Database 當中拿出來資料。
 
 ```python
+import random
 from excuse.models import Excuse
 
 def home(request):
-    excuse = Excuse.objects.all().order_by('?')[0]
+    excuse = random.choice(Excuse.objects.all())
     return render(request, "index.html", {'excuse': excuse})
 ```
 
-在這邊，我們用了 [order_by()](https://docs.djangoproject.com/en/dev/ref/models/querysets/#django.db.models.query.QuerySet.order_by) 這個 function，其中傳入 '?' 代表我們以隨機的方式對取出的資料做排序，接著再拿出第一筆。就可以達到我們想要的效果！
 
 ### 小練習
 

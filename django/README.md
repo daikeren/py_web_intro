@@ -38,43 +38,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 重新打開命令提示字元，試著輸入 `python`。你應該會看到和剛剛類似的內容，代表你已經成功讓系統認識到 Python 的安裝位置。
 
-## virtualenv
-
-在我們開發 Python 專案的時候，我們通常都會使用 virtualenv。使用 virtualenv 的好處如下：
-
-1. 我們會希望可以為每一個專案創造出獨立的環境。如此才不會因為其他專案的 Library 升級而導致專案出問題。
-2. 當我們的專案要移到其他機器上頭的時候，相依的套件比較好處理
-
-
-在 Ubuntu 當中可以直接用 apt-get 來安裝 virtualenv。
-
-```
-sudo apt-get install python-virtualenv
-```
-
-在其他的系統上，我們建議使用 pip 安裝 virtualenv。
-
-### 安裝 Virtualenv（非 Ubuntu）
-
-首先我們需要確認你的系統上有沒有安裝 pip。直接輸入以下指令：
-
-```
-pip
-```
-
-如果看到以下內容：
-
-```
-Usage:
-  pip <command> [options]
-
-Commands:
-  install                     Install packages.
-  uninstall                   Uninstall packages.
-[以下略…]
-```
-
-就代表你已經有 pip 了，可以跳過下一個小節，直接開始安裝 virtualenv。
 
 #### 安裝 Pip
 
