@@ -16,9 +16,9 @@ cd pyweb_intro
 
 既然 Django 是用 Python 寫成，我們首先需要安裝 Python。如果你使用 Linux 或 OS X，Python 已經內建於系統中，可以跳過此節。
 
-Windows 使用者可以先[前往官網下載 Python](https://www.python.org/download/)。本教學基於 Python 2.7，所以請下載 **Python 2.7 Windows Installer**。[^1]最後面的版本號可能會不同（例如 2.7.6），但只要挑 2.7 開頭的下載即可。
+Windows 使用者可以先[前往官網下載 Python](https://www.python.org/download/)。本教學基於 Python 2.7，所以請下載 **Python 2.7 Windows Installer**。最後面的版本號可能會不同（例如 2.7.6），但只要挑 2.7 開頭的下載即可。
 
-下載後雙擊執行，下一步到底就安裝完成了。預設的安裝位置會在 `C:\Python27`[^2]。試著[打開命令提示字元視窗](http://windows.microsoft.com/zh-tw/windows/command-prompt-faq)，輸入以下指令
+下載後雙擊執行，下一步到底就安裝完成了。預設的安裝位置會在 `C:\Python27`。試著[打開命令提示字元視窗](http://windows.microsoft.com/zh-tw/windows/command-prompt-faq)，輸入以下指令
 
 ```
 C:\Python27\python
@@ -34,15 +34,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 就代表安裝成功了。可以輸入 `exit()` 退出。
 
-但是每次都要輸入這麼長一串才能執行 Python 有點麻煩。藉由設定 `PATH` 環境變數，可以讓我們省略前面的路徑。打開控制台→系統，點選「進階系統設定」。[^3]在彈開的視窗中點選「環境變數」，會出現一個標題為「環境變數」的視窗。在這個視窗的上半部找到「Path」這個變數，雙擊後面的「值」欄位，在「變數值」欄位的最前面加上 `C:\Python27;C:\Python27\Scripts\`，接著一路確定關閉所有設定視窗。
+但是每次都要輸入這麼長一串才能執行 Python 有點麻煩。藉由設定 `PATH` 環境變數，可以讓我們省略前面的路徑。打開控制台→系統，點選「進階系統設定」。在彈開的視窗中點選「環境變數」，會出現一個標題為「環境變數」的視窗。在這個視窗的上半部找到「Path」這個變數，雙擊後面的「值」欄位，在「變數值」欄位的最前面加上 `C:\Python27;C:\Python27\Scripts\`，接著一路確定關閉所有設定視窗。
 
 重新打開命令提示字元，試著輸入 `python`。你應該會看到和剛剛類似的內容，代表你已經成功讓系統認識到 Python 的安裝位置。
-
-
-[^1]: 如果你使用 64 位元系統，也可以下載 **Python 2.7 Windows X86-64 Installer**。
-[^2]: 這裡假設你的系統磁碟是 `C:\`。如果你把系統裝在其他磁碟，請自行替換最前面的磁碟代號。
-[^3]: 這裡描述的步驟應該適用於 Windows 7 以上，但個系統可能會有些微差異。由於這並不是 Python 或 Windows 教學手冊，請自行上網尋找相關資源。
-
 
 ## virtualenv
 
@@ -91,34 +85,6 @@ python get-pip.py
 ```
 
 即可完成安裝。完成後請再次試著執行 `pip` 指令，以確認安裝是否成功。
-
-
-#### 安裝 Virtualenv
-
-直接輸入
-
-```
-pip install virtualenv
-```
-
-如果你使用 Linux 或 OS X，可能需要有超級使用者權限才能成功安裝（試著在前面加 `sudo`）。在 Windows 上應該可以直接安裝；如果失敗，請試著用系統管理員身分重新打開命令提示字元，再試著安裝看看。
-
-
-### 建立 Virtualenv 環境
-
-安裝好之後，讓我們來建立一個 virtualenv 環境，在 terminal 底下輸入：
-
-```
-virtualenv VENV
-```
-
-接下來輸入
-
-```
-source VENV/bin/activate
-```
-
-就可以啟動 virtualenv，從此只要在 virtualenv 下面安裝的 package 都只會存在于這個 virtualenv 當中。
 
 ## Install Django
 
