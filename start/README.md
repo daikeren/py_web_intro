@@ -2,6 +2,7 @@
 
 恭喜你看到了這邊，你已經對 Django 有了最基本的認知。那麼接下來我們該怎麼繼續下去呢？
 
+* [Django Girls 問卷](http://bit.ly/djangogirls) - 如果今天 Workshop 有引起你對 Django 的一點興趣，我們之後將會舉辦 Django Girls 活動，這邊需要大家的一些意見 :)
 * 在原本的 Excuse Model 裡面加上一個 author 的欄位，記錄是誰講的
 * 把這個 example 從頭再做一次，看看自己記得多少
 * 目前我們的 CSS 都是寫在 HTML 當中，試著把 CSS 抽出去
