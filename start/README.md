@@ -15,5 +15,6 @@
 * [Django Book](http://www.djangobook.com/en/2.0/index.html) - 雖然書的內容有點舊，不過還是有些東西值得參考
 * [Getting Started with Django](http://gettingstartedwithdjango.com/) - 如果你比較喜歡看 video，或許可以參考這個網站
 * [Two Scoops of Django](http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X) - 近期寫的最好的 Django 書之一，有看一定有收獲
+* [Django Packages](https://www.djangopackages.com/) - 想要幫網站加點其他功能嗎？可以先來這邊看看有沒有人有做好的 Django APP 可以用！
 
 除此之外，也歡迎大家可以來 [Taipei.py](http://www.meetup.com/Taipei-py/) 的活動跟大家進行一些實體的交流，彼此之間多聊聊才更能夠有進步 :)
