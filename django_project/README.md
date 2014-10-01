@@ -42,4 +42,4 @@ python manage.py runserver
 python manage.py migrate
 ```
 
-然後再次runserver啟動你的 web server，
+然後再次runserver啟動你的 web server。
