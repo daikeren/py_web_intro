@@ -19,6 +19,7 @@ python manage.py startapp excuse
   - tests.py
   - views.py
   - admin.py
+  - migrations
 ```
 
 這樣就順利的建起我們第一個 app 的目錄。在接下來的章節我們會來看看其中的檔案，不過現在我們暫時不管他。

@@ -51,14 +51,15 @@ class Excuse(models.Model):
 要把 table 生出來一樣要使用 manage.py 這個指令，我們透過 syncdb 來產生 table。syncdb 會根據 settings.py 裡面 INSTALLED_APPS 當中的 Django APP 當中的 models.py 中的 Model 生出相對應的 table，打開你的 shell 輸入：
 
 ```shell
-python manage.py syncdb
+python manage.py makemigrations
+python manage.py migrate
 ```
 
 就會完成生成 table 的生成。在這邊，你會看到因為我們在 INSTALLED_APPS 當中有使用 Django 的 auth 系統，因此 Django 會問你是否需要創建 superuser，在這邊你可以輸入一個你喜歡的 username 還有密碼，在等一下會使用到。
 
 ## 讓我們來玩玩 Model 吧
 
-在 syncdb 之後，我們在 terminal 中輸入
+在 migrate 之後，我們在 terminal 中輸入
 
 ```
 python manage.py shell
@@ -85,7 +86,7 @@ python manage.py shell
 >>>     print excuse.content
 ```
 
-其他更多的查詢 Django Model 方法可以參考 [Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.6/ref/models/querysets/)，透過 Django Model 提供的 API，讓你幾乎可以不用寫 SQL 就可以完成許多跟 Database 的操作。
+其他更多的查詢 Django Model 方法可以參考 [Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.7/ref/models/querysets/)，透過 Django Model 提供的 API，讓你幾乎可以不用寫 SQL 就可以完成許多跟 Database 的操作。
 
 ## 修改 Django View
 
@@ -103,7 +104,7 @@ def home(request):
 
 ### 小練習
 
-看看[Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.6/ref/models/querysets/)，還有哪些方法可以用呢？玩玩看吧！
+看看[Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.7/ref/models/querysets/)，還有哪些方法可以用呢？玩玩看吧！
 
 ## Django Admin
 

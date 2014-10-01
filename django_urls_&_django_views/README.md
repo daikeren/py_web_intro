@@ -22,7 +22,7 @@ def home(request):
     return HttpResponse(excuses[0])
 ```
 
-這是一個最簡單的 Django View，我們可以看到一個 Django View 基本上就是一個 python function，傳入值是 request，它的型別是 [HttpRequest](https://docs.djangoproject.com/en/1.6/ref/request-response/#httprequest-objects)，當中 Django 幫我們封裝了有關一個 HTTP Request 進來會傳入的資料。包含了 request body, request method... 等等。
+這是一個最簡單的 Django View，我們可以看到一個 Django View 基本上就是一個 python function，傳入值是 request，它的型別是 [HttpRequest](https://docs.djangoproject.com/en/1.7/ref/request-response/#httprequest-objects)，當中 Django 幫我們封裝了有關一個 HTTP Request 進來會傳入的資料。包含了 request body, request method... 等等。
 
 接著，我們用到了 [Python 的 list](https://docs.python.org/2/tutorial/datastructures.html)。如果你有其他程式語言的經驗，你可以把 list 看成跟 array 很像的概念。我們宣告了一個叫做 excuses 的 list，當中放了四個字串，分別是所有的 excuses。最後，回傳一個用 excuses[0] 當 constructor 的 HttpResponse 物件。同樣的，HttpResponse 也幫我們封裝了回傳給 browser 的資訊。包含了 content type, status code 等等。
 

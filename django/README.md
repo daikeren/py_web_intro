@@ -54,7 +54,7 @@ python get-pip.py
 安裝 Django 十分簡單，只要透過 pip 就可以完成。在 terminal 底下輸入：
 
 ```
-pip install django
+pip install "django<1.8"
 ```
 
-便會下載最新版的 django 並且完成安裝。
+便會下載最新版的 Django 1.7 並且完成安裝。
