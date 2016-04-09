@@ -18,7 +18,6 @@ def home(request):
         "Actually, that is a feature",
         "It works on my machine",
     ]
-
     return HttpResponse(excuses[0])
 ```
 
