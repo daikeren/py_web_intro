@@ -37,12 +37,12 @@ from django.db import models
 class Excuse(models.Model):
     content = models.TextField()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.content
 
 ```
 
-在此，我們建立了一個叫做 Excuse 的 Model，當中有個叫做 content 的屬性來儲存內容。此外，我們也宣告了一個 __unicode__(self) function 來表示 Excuse 物件要如何以 unicode 表示自己，在此我們直接用 Excuse 的內容做表示。
+在此，我們建立了一個叫做 Excuse 的 Model，當中有個叫做 content 的屬性來儲存內容。此外，我們也宣告了一個 __str__(self) function 來表示 Excuse 物件要如何以表示自己，在此我們直接用 Excuse 的內容做表示。
 
 ## 實際建立 Database Table
 
@@ -55,7 +55,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-就會完成生成 table 的生成。在這邊，你會看到因為我們在 INSTALLED_APPS 當中有使用 Django 的 auth 系統，因此 Django 會問你是否需要創建 superuser，在這邊你可以輸入一個你喜歡的 username 還有密碼，在等一下會使用到。
+就會完成生成 table 的生成。
 
 ## 讓我們來玩玩 Model 吧
 
@@ -83,10 +83,10 @@ python manage.py shell
 ```python
 >>> Excuse.objects.all()
 >>> for excuse in Excuse.objects.all():
->>>     print excuse.content
+>>>     print(excuse.content)
 ```
 
-其他更多的查詢 Django Model 方法可以參考 [Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.7/ref/models/querysets/)，透過 Django Model 提供的 API，讓你幾乎可以不用寫 SQL 就可以完成許多跟 Database 的操作。
+其他更多的查詢 Django Model 方法可以參考 [Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.9/ref/models/querysets/)，透過 Django Model 提供的 API，讓你幾乎可以不用寫 SQL 就可以完成許多跟 Database 的操作。
 
 ## 修改 Django View
 
@@ -125,10 +125,10 @@ INSTALLED_APPS = (
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = pattern('',
+urlpatterns = [
     ...
     url(r'^admin/', include(admin.site.urls)),
-)
+]
 ```
 
 其中 include 這行就是代表把 Django admin 的相關 url 都引入。

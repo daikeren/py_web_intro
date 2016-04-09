@@ -18,6 +18,7 @@ python manage.py startapp excuse
   - models.py
   - tests.py
   - views.py
+  - apps.py
   - admin.py
   - migrations
 ```

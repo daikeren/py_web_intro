@@ -33,10 +33,10 @@ def home(request):
 我們寫好第一個 view 之後，那麼我們該怎麼讓 Django 知道連到哪個 URL 會呼叫這個 view 呢？這就是 Django URLs 會處理的事情。讓我們打開 mysite/urls.py 這個檔案，在 urlpatterns 當中加入以下的 code
 
 ```python
-urlpatterns = patterns('',
+urlpatterns = [
     ...
     url(r'^$', 'excuse.views.home'),
-)
+]
 ```
 
 在這邊，我們可以看到我們使用了一個 url function ，有三個傳入值，第一個傳入值是個 regular expression，在此我們傳入一個空字串，也就是會對應到 url 當中沒有任何東西的時候。而第二個傳入值是個 view function 的位置，這邊我們是傳入剛剛寫的 excuse.views.home
