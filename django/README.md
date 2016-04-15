@@ -40,16 +40,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 重新打開命令提示字元，試著輸入 `python`。你應該會看到和剛剛類似的內容，代表你已經成功讓系統認識到 Python 的安裝位置。
 
 
-#### 安裝 Pip
-
-下載 [`get-pip.py`](https://bootstrap.pypa.io/get-pip.py) 這個檔案。切換至該檔案的目錄，用 Python 執行它：
-
-```
-python get-pip.py
-```
-
-即可完成安裝。完成後請再次試著執行 `pip` 指令，以確認安裝是否成功。
-
 ## Install Django
 
 安裝 Django 十分簡單，只要透過 pip 就可以完成。在 terminal 底下輸入：
