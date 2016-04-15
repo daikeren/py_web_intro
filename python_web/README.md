@@ -1,6 +1,6 @@
 # Introduction
 
-大家都知道所謂的程式語言其實就是人和電腦之間溝通的語言，Python 是個很有趣的程式語言！除了可以讓電腦乖乖做事之外，也可以讓人好懂 :) 也因此除了 Web 之外，在其他許許多多的領域都可以看到 Python 的蹤跡。
+大家都知道所謂的程式語言其實就是人和電腦之間溝通的語言，Python 是個很有趣的程式語言！除了可以讓電腦乖乖做事之外，也可以讓人好懂，也因此除了 Web 之外，在其他許許多多的領域都可以看到 Python 的蹤跡。
 
 在 Python 的世界當中有[許多的 Web Framework](https://wiki.python.org/moin/WebFrameworks)，在眾多的 Web Framework 當中，最常被提到的就是 [Django](https://www.djangoproject.com/) 了。
 

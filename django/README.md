@@ -16,7 +16,7 @@ cd pyweb_intro
 
 既然 Django 是用 Python 寫成，我們首先需要安裝 Python。如果你使用 Linux 或 OS X，Python 已經內建於系統中，可以跳過此節。
 
-Windows 使用者可以先[前往官網下載 Python](https://www.python.org/download/)。本教學基於 Python3，所以請下載 **Python 3 Windows Installer**。最後面的版本號可能會不同（例如 2.7.6），但只要挑 2.7 開頭的下載即可。
+Windows 使用者可以先[前往官網下載 Python](https://www.python.org/download/)。本教學基於 Python3，所以請下載 **Python 3 Windows Installer**。
 
 下載後雙擊執行，下一步到底就安裝完成了。預設的安裝位置會在 `C:\Python3`。試著[打開命令提示字元視窗](http://windows.microsoft.com/zh-tw/windows/command-prompt-faq)，輸入以下指令
 
@@ -58,4 +58,4 @@ python get-pip.py
 pip install "django"
 ```
 
-便會下載最新版的 Django 1.9 並且完成安裝。
+便會下載最新版的 Django 1.9.5 並且完成安裝。

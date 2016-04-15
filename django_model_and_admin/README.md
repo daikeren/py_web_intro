@@ -104,7 +104,7 @@ def home(request):
 
 ### 小練習
 
-看看[Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.7/ref/models/querysets/)，還有哪些方法可以用呢？玩玩看吧！
+看看[Django Queryset 的官方文件](https://docs.djangoproject.com/en/1.9/ref/models/querysets/)，還有哪些方法可以用呢？玩玩看吧！
 
 ## Django Admin
 
@@ -133,7 +133,13 @@ urlpatterns = [
 
 其中 include 這行就是代表把 Django admin 的相關 url 都引入。
 
-接著造訪 http://localhost:8000/admin ，使用你在上一章當中創建的 user/password 登入，如果一切順利的話你會看到 Django Admin 的畫面。不過這個時候 Django Admin 還看不到我們建立的 Excuse 這個 Model，所以我們要告訴 Django Admin 這件事情。
+接著輸入
+
+    python manage.py createsuperuser
+
+打入你的使用者帳號跟密碼，這邊的帳號密碼可以讓你等等登入後台用。
+
+接著造訪 http://localhost:8000/admin ，使用你剛剛創建的 user/password 登入，如果一切順利的話你會看到 Django Admin 的畫面。不過這個時候 Django Admin 還看不到我們建立的 Excuse 這個 Model，所以我們要告訴 Django Admin 這件事情。
 
 在 excuse 目錄底下，新增 admin.py，內容如下：
 

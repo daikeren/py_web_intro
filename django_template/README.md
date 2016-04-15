@@ -53,4 +53,4 @@ def home(request):
 
 ### 小練習
 
-看一下 [Django Template 的說明文件](https://docs.djangoproject.com/en/1.7/ref/templates/builtins/)，如果想要把 excuse 變成全部都大寫的話該怎麼做呢？
+看一下 [Django Template 的說明文件](https://docs.djangoproject.com/en/1.9/ref/templates/builtins/)，如果想要把 excuse 變成全部都大寫的話該怎麼做呢？
