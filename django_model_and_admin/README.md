@@ -48,7 +48,7 @@ class Excuse(models.Model):
 
 上面的 code 只是告訴 Django table 要長什麼樣子，接下來要真正的在資料庫中把 table 生出來。
 
-要把 table 生出來一樣要使用 manage.py 這個指令，我們透過 syncdb 來產生 table。syncdb 會根據 settings.py 裡面 INSTALLED_APPS 當中的 Django APP 當中的 models.py 中的 Model 生出相對應的 table，打開你的 shell 輸入：
+要把 table 生出來一樣要使用 manage.py 這個指令，我們透過 migrate 來產生 table。migrate 會根據 settings.py 裡面 INSTALLED_APPS 當中的 Django APP 當中的 models.py 中的 Model 生出相對應的 table，打開你的 shell 輸入：
 
 ```shell
 python manage.py makemigrations
