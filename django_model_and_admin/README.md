@@ -94,6 +94,7 @@ python manage.py shell
 
 ```python
 import random
+from django.shortcuts import render
 from excuse.models import Excuse
 
 def home(request):
